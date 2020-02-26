@@ -21,5 +21,21 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
     'import/prefer-default-export': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'global-require': 'off',
+    'react-native/no-raw-text': 'off',
+    'no-param-reassign': 'off',
+    'no-underscore-dange': 'off',
+    camelcase: 'off',
+    'no-console': ['error', { alllow: ['tron'] }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+  },
+  settings: {
+    'import/resoler': {
+      'babel-plugin-root-import': {
+        rootPathSuffix: 'src',
+      },
+    },
   },
 };
