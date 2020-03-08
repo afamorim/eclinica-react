@@ -1,7 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
+
+import { signInRequest } from '~/store/modules/auth/actions';
 
 import logo from '~/assets/logo.svg';
 
@@ -17,9 +20,10 @@ export default function SignIn() {
     validationSchema: schema,
   });
 
-  function onSubmit(data) {
-    console.tron.log('Teste');
-    console.tron.log(data);
+  const dispatch = useDispatch();
+
+  function onSubmit({ email, password }) {
+    dispatch(signInRequest(email, password));
   }
 
   console.tron.log(watch('email'));
